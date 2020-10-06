@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="../src/common.css">
     <link rel="stylesheet" href="../src/css/index1.css">
     <link rel="stylesheet" href="../src/font_yq21gqpays/iconfont.css">
+    <link rel="shortcut icon" href="../src/images/favicon.ico">
 </head>
 
 <body>
     <div class="banner">
         <!-- logo图标 -->
         <div class="banner_l">
+            <a class="logo" href="https://www.midea.cn/?mtag=40005.1.10" target="_blank"></a>
         </div>
         <div class="banner_m">
             <ul>
@@ -41,14 +43,25 @@
             <input type="search" name="keyword" id="keyword" placeholder="">
             <span class="iconfont">&#xe616;</span>
             <div class="icon_phone1">
+                <div class="wx">
+                    <!-- 微信二维码 -->
+                    <img src="https://pic.mdcdn.cn/h5/pic/202003/5e7c6878e200f.jpg" alt="">
+                </div>
                 <i class="icon_phone"></i>
             </div>
             <div class="icon_phone2">
+                <!-- 购物车登录 -->
+                <div class="cart_login">
+                    立即<a href="//www.midea.cn/cart">登录</a>,查看购物车商品
+                </div>
                 <i class="icon_cart"></i>
             </div>
             <div class="icon_phone3">
-                <i class="icon_login"></i>
-                <em class="icon_login_name">登录</em>
+                <!-- 注册登录-此处要写登录界面的链接 -->
+                <a href="file:///C:/wamp/www/8-17_HTML/Midea/src/registry.html">
+                    <i class="icon_login">&#xe60b;</i>
+                    <em class="icon_login_name">登录</em>
+                </a>
             </div>
 
 
@@ -76,12 +89,46 @@
                     </li>
                     <li>
                         <i class="iconfont">&#xe68c;</i>
-                        <em style="margin-left: 10px;">企业资质</em>
+                        <em>企业资质</em>
                     </li>
                 </ul>
             </div>
         </div>
-        <!-- 二级侧边导航 -->
+        <!-- 右下角漂浮栏-此处需要用js渲染 -->
+        <div class="detail_floating">
+            <div class="items">
+                <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                    <span class="iconfont">&#xe60b;</span>
+                </a>
+                <i>客服</i>
+            </div>
+            <div class="items">
+                <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                    <span class="iconfont">&#xe60b;</span>
+                </a>
+                <i>客服</i>
+            </div>
+            <div class="items">
+                <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                    <span class="iconfont">&#xe60b;</span>
+                </a>
+                <i>客服</i>
+            </div>
+            <div class="items">
+                <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                    <span class="iconfont">&#xe60b;</span>
+                </a>
+                <i>客服</i>
+            </div>
+            <div class="items">
+                <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                    <span class="iconfont">&#xe60b;</span>
+                </a>
+                <i>客服</i>
+            </div>
+
+        </div>
+        <!-- 二级侧边导航-此处需要用js渲染 -->
         <div class="nav">
             <!-- 轮播图 -->
             <img src="https://pic.midea.cn/h5/pic/202009/e21c4a7c77f2.jpg?x-oss-process=image/format,webp/quality,Q_90&@100Q.jpg" alt="">
@@ -314,6 +361,84 @@
             <h2>会员专区</h2>
             <a href="https://www.midea.cn/my/score?action=cur_exchange">更多福利></a>
         </div>
+        <div class="floor_vip">
+            <ul>
+                <li>
+                    <a target="_blank" href="https://vip.midea.cn/my/score_welfare">
+                        <img src="https://pic.midea.cn/h5/pic/201906/5cf253f71f923.png?x-oss-process=image/format,webp/quality,Q_90&" alt=""></a>
+                    <a class="btn" target="_blank" href="https://vip.midea.cn/my/score_welfare">立即查看</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://vip.midea.cn/my/score_welfare">
+                        <img src="https://pic.midea.cn/h5/pic/201906/5cf253f71f721.png?x-oss-process=image/format,webp/quality,Q_90&" alt=""></a>
+                    <a class="btn" target="_blank" href="https://vip.midea.cn/my/score_welfare">立即兑换</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://vip.midea.cn/my/score_welfare">
+                        <img src="https://pic.midea.cn/h5/pic/201906/5cf253f71b7c6.png?x-oss-process=image/format,webp/quality,Q_90&" alt=""></a>
+                    <a class="btn" target="_blank" href="https://vip.midea.cn/my/score_welfare">立即兑奖</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://vip.midea.cn/my/score_welfare">
+                        <img src="https://pic.midea.cn/h5/pic/201906/5cf253f79b040.png?x-oss-process=image/format,webp/quality,Q_90&" alt=""></a>
+                    <a class="btn" target="_blank" href="https://vip.midea.cn/my/score_welfare">立即查看</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="banner_nav" style="height: 55px;">
+            <ul>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>服务条款</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>隐私政策</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>联系我们</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>帮助中心</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>服务支持</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>东芝商城</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>小天鹅商城</h3>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="copy">
+            <p style="margin-bottom: 10px;">
+                <i>Copyright © 1968-2020 广东美的网络科技有限公司</i>
+                <a href="http://www.beian.miit.gov.cn" target="_blank ">粤ICP备17058257号</a>
+                <img src="../src/images/gongan.jpg" alt=""> 粤公网安备 44060602000546号
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44060602000546" target="_blank"></a>
+                <img src="../src/images/gongshang.jpg" alt="工商局红盾标志" style="width: 20px;">
+                <a href="https://www.midea.cn/act/help_center_new/transaction_terms?id=341&parentId=841"> 粤工商备P06811806002512</a>
+            </p>
+        </div>
+
+    </div>
 </body>
 
 </html>

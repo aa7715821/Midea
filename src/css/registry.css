@@ -1,0 +1,69 @@
+/*
+banner
+*/
+.header {
+  height: 44px;
+  width: 100%;
+  background: #0092d8;
+  margin: -8px 5px;
+}
+.header .logio {
+  width: 120px;
+  height: 44px;
+  background: url(../images/index_sprite.png) no-repeat 0 -242px;
+}
+
+/*
+main
+*/
+.main {
+  width: 1190px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.main img {
+  width: 538px;
+  height: 485px;
+  margin-top: 50px;
+}
+.main .registry_login {
+  width: 300px;
+  height: 408px;
+  padding: 29px 38px 38px;
+  margin-top: 100px;
+  margin-left: -100px;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px 0 #d6d6d6;
+  border-radius: 2px;
+  min-height: 412px;
+}
+.main .registry_login p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #666;
+}
+.main .registry_login ul {
+  margin-bottom: 20px;
+}
+.main .registry_login .qq a {
+  display: block;
+  width: 49px;
+  height: 48px;
+  text-indent: -999em;
+  overflow: hidden;
+  background-image: url(../images/login.png);
+}
+.main .registry_login .wx a {
+  display: block;
+  width: 49px;
+  height: 48px;
+  margin: -49px 70px;
+  text-indent: -999em;
+  overflow: hidden;
+  background-image: url(../images/login.png);
+  background-position: -57px 0;
+}
+
+/*# sourceMappingURL=registry.css.map */
