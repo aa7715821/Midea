@@ -1,3 +1,5 @@
+@charset "utf-8"; //设置中文字符
+
 /*
 banner
 */
@@ -67,4 +69,101 @@ main
             background-position: -57px 0;
         }
     }
+    /*
+右侧注册-form
+*/
+    form {
+        width: 535px;
+        border: 1px #999 solid;
+        position: relative;
+        margin: 51px auto;
+        box-shadow: 0 0 5px rgba(7, 5, 5, 0.5);
+        background: white;
+        .care {
+            font-size: 14px;
+            color: #c2c814;
+            margin-left: 28px;
+        }
+        h2 {
+            font-size: 16px;
+            color: #116589;
+            margin: 50px 0px 30px 100px;
+        }
+        label {
+            color: #506579;
+            position: absolute;
+            font-size: 14px;
+            width: 90px;
+            left: 20px;
+        }
+        input {
+            height: 30px;
+            margin: 10px;
+            display: block;
+            width: 280px;
+            text-indent: 100px;
+            outline: none;
+        }
+        button {
+            width: 280px;
+            height: 30px;
+            background: rgb(214, 4, 4);
+            border: 0px;
+            line-height: 30px;
+            color: rgb(25, 233, 171);
+            margin: 0 0 10px 10px;
+            box-shadow: 0 0 2px 0 #000;
+        }
+        div {
+            text-align: center;
+            font-weight: 900;
+            font-size: 30px;
+        }
+        span {
+            position: absolute;
+            left: 320px;
+            font-size: 12px;
+        }
+        button {
+            width: 60px;
+            margin-left: 120px;
+            border-radius: 4px;
+            background: rgb(6, 73, 95);
+        }
+        .Sign {
+            margin-left: 210px;
+            top: 550px;
+        }
+        .box {
+            position: absolute;
+            left: 190px;
+            top: 535px;
+            width: 20px;
+        }
+        .yzm {
+            background: white;
+            width: 76px;
+            height: 20px;
+            margin-left: -10px;
+            border-radius: 2px;
+        }
+    }
+}
+
+
+/*
+footer
+*/
+
+.copyright {
+    width: 90%;
+    border-top: 1px solid #e0e0e0;
+    margin: 0 auto 30px;
+    padding-top: 15px;
+    color: #999;
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    font-family: '\5FAE\8F6F\96C5\9ED1';
+    text-align: center;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美的，中国家电行业领导者</title>
+    <link rel="stylesheet" href="../src/common.css">
+    <link rel="shortcut icon" href="../src/images/favicon.ico">
+    <link rel="stylesheet" href="../src/css/login.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="https://www.midea.cn/?mtag=40005.1.10">
+            <div class="logio">
+            </div>
+        </a>
+    </div>
+    <div class="main">
+        <!-- 左侧品牌宣传 -->
+        <div class="Brand_promotion ">
+            <img src="https://pic.midea.cn/h5/pic/202006/51e8ecce92b9.png?x-oss-process=image/format,webp/quality,Q_90&@100Q.png " alt="美的会员PRO专场">
+        </div>
+        <!-- 右侧登录界面 -->
+        <div class="login">
+            <p>账号密码登录</p>
+            <form action="">
+                <input type="text" autofocus="autofocus" placeholder="用户名:" class="username"> <span style="top:142px"></span>
+                <input type="text" autofocus="autofocus" placeholder="密码:" class="password"> <span style="top:142px"></span>
+                <input type="submit" id="login" value="登录" style="background-color: #0092d8;cursor: pointer;">
+            </form>
+            <div class="registry">
+                <a href="../src/registry.html">注册</a>
+                <a style="left: 230px;width: 80px;" href="https://www.midea.cn/login/find_password">找回密码?</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Copyright © 1968-2020 广东美的网络科技有限公司 粤ICP备17058257号
+    </div>
+</body>
+<script src="../src/js/callback.js"></script>
+<script src="../src/js/sha1.js"></script>
+<script>
+    const login = document.querySelector('#login');
+    const username = document.querySelector('.username');
+    const password = document.querySelector('.password');
+    //登录：将前端的用户名和密码传递给后端。(加密传输)
+    login.onclick = function() {
+        ajax({
+            type: 'post',
+            url: 'http://localhost/8-17_HTML/Midea/php/login.php',
+            data: {
+                user: username.value,
+                pass: hex_sha1(password.value)
+            },
+            success: function(data) {
+                if (!data) { //不通过
+                    alert('用户名或者密码错误');
+                    //情况用户名和密码里面的值
+                    username.value = '';
+                    password.value = '';
+                } else {
+                    //跳转到首页。
+                    location.href = "../src/index1.html";
+                }
+            }
+        })
+    }
+</script>
+
+</html>
