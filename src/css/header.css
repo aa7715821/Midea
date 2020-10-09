@@ -1,0 +1,145 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*
+头部
+*/
+.banner {
+  width: 100%;
+  margin: 0, auto;
+  background-color: #0092d8;
+  height: 50px;
+}
+
+.banner_l .logo {
+  float: left;
+  width: 120px;
+  height: 44px;
+  background-image: url(../images/index_service_sprite_v3.png);
+  background-size: 200px 80px;
+  background-position: -80px 5px;
+}
+
+.banner_m .item {
+  float: left;
+  padding: 0 30px;
+  font-family: \5FAE\8F6F\96C5\9ED1;
+  height: 60px;
+  line-height: 60px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.banner_m .item：hover {
+  color: white;
+}
+
+.banner_m .item:hover {
+  color: white;
+}
+
+.banner_r input {
+  height: 50px;
+  width: 15%;
+  margin: 0 10px 0 35px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.banner_r span {
+  position: absolute;
+  left: 729px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 99;
+  background-color: white;
+  width: 25px;
+  height: 49px;
+  line-height: 50px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+}
+.banner_r .icon_phone {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 15px auto;
+  background: url(../images/index_sprite.png) no-repeat;
+  background-position: -120px -215px;
+  cursor: pointer;
+}
+.banner_r .icon_phone1 img {
+  background: #fff;
+  position: absolute;
+  z-index: 51;
+  border-top: 0 none;
+  top: 48px;
+  left: auto;
+  right: -121px;
+  margin: 0;
+  display: none;
+}
+
+.icon_phone1 {
+  position: absolute;
+  right: 288px;
+  top: 4px;
+}
+
+.icon_phone2 {
+  position: relative;
+  position: absolute;
+  right: 225px;
+  top: 4px;
+  /*
+  此处使用js渲染，不能使用css
+  */
+}
+.icon_phone2 .icon_cart {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 15px auto;
+  background: url(../images/index_sprite.png) no-repeat;
+  background-position: -146px -215px;
+  cursor: pointer;
+}
+.icon_phone2 .cart_login {
+  width: 360px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  position: absolute;
+  left: -147px;
+  margin-top: 46px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  font-size: 12px;
+  background-color: #fff;
+  z-index: 51;
+  display: none;
+  cursor: pointer;
+}
+
+.icon_phone3 {
+  position: absolute;
+  right: 120px;
+  top: 18px;
+  display: flex;
+  flex-direction: row;
+}
+.icon_phone3 .icon_login {
+  width: 20px;
+  height: 20px;
+  background: url(../images/index_sprite.png) no-repeat;
+  background-position: -35px -215px;
+  cursor: pointer;
+}
+.icon_phone3 .icon_login_name {
+  margin-left: -4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -259,9 +259,8 @@ main
         }
     }
     .nav ul {
-        width: 230px;
+        width: 210px;
         height: 470px;
-        // background: rgba(0, 0, 0, 0.6);
         padding-top: 10px;
         position: absolute;
         left: 0px;
@@ -310,6 +309,55 @@ main
             box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
             display: none;
             transition: top 0.3s ease;
+        }
+        /*
+        幻灯片效果css
+        */
+        .lunbo {
+            height: 479px;
+            position: relative;
+            ul li {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                opacity: 0;
+            }
+            ol {
+                position: absolute;
+                left: 50%;
+                bottom: 20px;
+                li {
+                    left: 20px;
+                    float: left;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background: lightyellow;
+                    text-indent: -999em;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    .active {
+                        background: blue;
+                    }
+                }
+            }
+            .left {
+                left: 220px;
+                display: none;
+                position: absolute;
+                top: 210px;
+                width: 160px;
+                height: 60px;
+                overflow: hidden;
+                background-position: -171px -59px;
+            }
+            .right {
+                right: 0;
+                display: none;
+                position: absolute;
+                top: 210px;
+                width: 160px;
+            }
         }
     }
     /*
@@ -393,14 +441,15 @@ floor_goods
 
 .floor_goods {
     left: -1px;
-    width: 600px;
+    // width: 300px;
     height: 680px;
     border: 1px solid #e0e0e0;
-    height: 680px;
     position: relative;
     margin-bottom: -1px;
-    overflow: hidden;
+    // overflow: hidden;
     .product {
+        display: flex;
+        flex-direction: column;
         img {
             width: 500px;
             height: 555px;
@@ -437,7 +486,8 @@ floor_goods
     border: 1px solid #e0e0e0;
     position: relative;
     margin-bottom: -1px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: row;
     .product {
         img {
             width: 200px;
@@ -472,11 +522,12 @@ floor_goods
 }
 
 .goodsall {
-    display: flex;
+    // display: flex;
     flex-direction: row;
     .floor_goodss {
         display: flex;
         flex-direction: row;
+        width: 602px;
     }
     .goods_test {
         font-size: 14px;

@@ -1,138 +1,120 @@
 @charset "UTF-8";
-
 /*
 banner
 */
-
 .header {
-    height: 44px;
-    width: 100%;
-    background: #0092d8;
-    margin: -8px 5px;
+  height: 44px;
+  width: 100%;
+  background: #0092d8;
+  margin: -8px 5px;
 }
-
 .header .logio {
-    width: 120px;
-    height: 44px;
-    background: url(../images/index_sprite.png) no-repeat 0 -242px;
+  width: 120px;
+  height: 44px;
+  background: url(../images/index_sprite.png) no-repeat 0 -242px;
 }
-
 
 /*
 main
 */
-
 .main {
-    /*
+  /*
   左侧品牌宣传栏
   */
-    width: 1190px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    clear: both;
-    /*
+  width: 1190px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  clear: both;
+  /*
   右侧登录界面
   */
 }
-
 .main img {
-    width: 538px;
-    height: 485px;
-    margin: 50px 50px;
+  width: 538px;
+  height: 485px;
+  margin: 50px 50px;
 }
-
 .main .login {
-    width: 300px;
-    padding: 100px 38px;
-    margin: 50px;
-    border: 1px solid #d6d6d6;
-    box-shadow: 0 0 4px 0 #d6d6d6;
-    border-radius: 2px;
+  width: 300px;
+  padding: 100px 38px;
+  margin: 50px;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px 0 #d6d6d6;
+  border-radius: 2px;
 }
-
 .main p {
-    font-size: 20px;
-    line-height: 40px;
-    height: 40px;
-    text-align: center;
-    color: #666;
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  color: #666;
 }
-
 .main .login form {
-    width: 287px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    position: relative;
+  width: 287px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
 }
-
 .main .login form label {
-    color: #506579;
-    position: absolute;
-    font-size: 14px;
-    left: 20px;
+  color: #506579;
+  position: absolute;
+  font-size: 14px;
+  left: 20px;
 }
-
 .main .login form input {
-    height: 30px;
-    margin: 10px;
-    display: block;
-    width: 280px;
-    border: 1px solid #c8c8c8;
-    border-radius: 2px;
-    outline: none;
+  height: 30px;
+  margin: 10px;
+  display: block;
+  width: 280px;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+  outline: none;
 }
-
 .main .login form button {
-    width: 283px;
-    height: 30px;
-    border: 0px;
-    line-height: 30px;
-    background: #0092d8;
-    border-radius: 2px;
-    color: white;
-    margin-left: 10px;
+  width: 283px;
+  height: 30px;
+  border: 0px;
+  line-height: 30px;
+  background: #0092d8;
+  border-radius: 2px;
+  color: white;
+  margin-left: 10px;
 }
-
 .main .login form span {
-    font-size: 12px;
-    width: 10px;
-    left: 320px;
-    font-size: 12px;
+  font-size: 12px;
+  width: 10px;
+  left: 320px;
+  font-size: 12px;
 }
-
 .main .registry {
-    width: 100px;
-    height: 100px;
-    position: relative;
+  width: 100px;
+  height: 100px;
+  position: relative;
 }
-
 .main .registry a {
-    color: #666;
-    font-size: 14px;
-    position: absolute;
-    top: 200px;
-    left: 20px;
+  color: #666;
+  font-size: 14px;
+  position: absolute;
+  top: 200px;
+  left: 20px;
 }
-
 
 /*
 footer
 */
-
 .footer {
-    width: 90%;
-    border-top: 1px solid #e0e0e0;
-    margin: 0 auto 30px;
-    padding-top: 15px;
-    color: #999;
-    font-size: 12px;
-    line-height: 12px;
-    height: 12px;
-    font-family: '\5FAE\8F6F\96C5\9ED1';
-    text-align: center;
+  width: 90%;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 auto 30px;
+  padding-top: 15px;
+  color: #999;
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  font-family: '\5FAE\8F6F\96C5\9ED1';
+  text-align: center;
 }
-
 
 /*# sourceMappingURL=login.css.map */

@@ -1,0 +1,41 @@
+/*
+footer
+*/
+.footer {
+  width: 1200px;
+  margin: 160px 0 0 20px;
+}
+.footer ul {
+  width: 1050px;
+  margin-left: 45px;
+}
+.footer ul li {
+  float: left;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.footer ul li h3 {
+  color: #333;
+  font-size: 12px;
+}
+.footer ul li h3:hover {
+  background-color: lightblue;
+}
+.footer .copy {
+  margin-left: 44px;
+  color: #999;
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  font-family: '\5FAE\8F6F\96C5\9ED1';
+}
+.footer .copy img {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=footer.css.map */

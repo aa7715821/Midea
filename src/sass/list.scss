@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/*
+列表页
+*/
+
+.list {
+    width: 1160px;
+    margin: 0 auto;
+    font-size: 14px;
+    li {
+        width: 200px;
+        padding: 10px;
+        float: left;
+        margin: 0 10px 10px 0;
+        border: 1px solid #ccc;
+        height: 310px;
+        position: relative;
+        p {
+            width: 200px;
+            height: 48px;
+            line-height: 24px;
+            overflow: hidden;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+        span {
+            display: block;
+        }
+    }
+}
+
+.goods_list {
+    width: 1200px;
+    height: 42px;
+    p {
+        display: inline-block;
+        line-height: 42px;
+        margin-left: -650px;
+        color: #0092d8;
+        cursor: pointer;
+        font-size: 14px;
+        &:hover {
+            color: #f60;
+        }
+    }
+    .price {
+        margin-top: -32px;
+        margin-left: 90px;
+        cursor: pointer;
+        span {
+            font-size: 14px;
+            margin-left: 20px;
+        }
+        i {
+            vertical-align: middle;
+            width: 10px;
+            height: 9px;
+            margin: 0 4px;
+            line-height: 22px;
+            overflow: hidden;
+        }
+    }
+    .Price_choice {
+        position: relative;
+        ul {
+            color: #333;
+            position: absolute;
+            width: 123px;
+            left: -100px;
+            height: 100px;
+            border: 1px solid #eee;
+            top: -11px;
+            box-sizing: border-box;
+            background: #fff;
+            z-index: 50;
+            left: 78px;
+            top: 10px;
+            border-top: none;
+            li {
+                z-index: 99;
+                height: 30px;
+                line-height: 65px;
+                text-align: center;
+            }
+        }
+    }
+}

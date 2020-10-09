@@ -633,4 +633,374 @@ footer
   margin-left: 5px;
 }
 
-/*# sourceMappingURL=index1.css.map */
+/*
+列表页
+*/
+.list {
+  width: 1160px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+.list li {
+  width: 200px;
+  padding: 10px;
+  float: left;
+  margin: 0 10px 10px 0;
+  border: 1px solid #ccc;
+  height: 310px;
+  position: relative;
+}
+.list li p {
+  width: 200px;
+  height: 48px;
+  line-height: 24px;
+  overflow: hidden;
+}
+.list li img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+.list li span {
+  display: block;
+}
+
+.goods_list {
+  width: 1200px;
+  height: 42px;
+}
+.goods_list p {
+  display: inline-block;
+  line-height: 42px;
+  margin-left: -650px;
+  color: #0092d8;
+  cursor: pointer;
+  font-size: 14px;
+}
+.goods_list p:hover {
+  color: #f60;
+}
+.goods_list .price {
+  margin-top: -32px;
+  margin-left: 90px;
+  cursor: pointer;
+}
+.goods_list .price span {
+  font-size: 14px;
+  margin-left: 20px;
+}
+.goods_list .price i {
+  vertical-align: middle;
+  width: 10px;
+  height: 9px;
+  margin: 0 4px;
+  line-height: 22px;
+  overflow: hidden;
+}
+.goods_list .Price_choice {
+  position: relative;
+}
+.goods_list .Price_choice ul {
+  color: #333;
+  position: absolute;
+  width: 123px;
+  left: -100px;
+  height: 100px;
+  border: 1px solid #eee;
+  top: -11px;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 50;
+  left: 78px;
+  top: 10px;
+  border-top: none;
+}
+.goods_list .Price_choice ul li {
+  z-index: 99;
+  height: 30px;
+  line-height: 65px;
+  text-align: center;
+}
+
+/*
+banner
+*/
+.header {
+  height: 44px;
+  width: 100%;
+  background: #0092d8;
+  margin: -8px 5px;
+}
+.header .logio {
+  width: 120px;
+  height: 44px;
+  background: url(../images/index_sprite.png) no-repeat 0 -242px;
+}
+
+/*
+main
+*/
+.main {
+  /*
+  左侧品牌宣传栏
+  */
+  width: 1190px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  clear: both;
+  /*
+  右侧登录界面
+  */
+}
+.main img {
+  width: 538px;
+  height: 485px;
+  margin: 50px 50px;
+}
+.main .login {
+  width: 300px;
+  padding: 100px 38px;
+  margin: 50px;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px 0 #d6d6d6;
+  border-radius: 2px;
+}
+.main p {
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  color: #666;
+}
+.main .login form {
+  width: 287px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
+}
+.main .login form label {
+  color: #506579;
+  position: absolute;
+  font-size: 14px;
+  left: 20px;
+}
+.main .login form input {
+  height: 30px;
+  margin: 10px;
+  display: block;
+  width: 280px;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+  outline: none;
+}
+.main .login form button {
+  width: 283px;
+  height: 30px;
+  border: 0px;
+  line-height: 30px;
+  background: #0092d8;
+  border-radius: 2px;
+  color: white;
+  margin-left: 10px;
+}
+.main .login form span {
+  font-size: 12px;
+  width: 10px;
+  left: 320px;
+  font-size: 12px;
+}
+.main .registry {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.main .registry a {
+  color: #666;
+  font-size: 14px;
+  position: absolute;
+  top: 200px;
+  left: 20px;
+}
+
+/*
+footer
+*/
+.footer {
+  width: 90%;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 auto 30px;
+  padding-top: 15px;
+  color: #999;
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  font-family: '\5FAE\8F6F\96C5\9ED1';
+  text-align: center;
+}
+
+/*
+banner
+*/
+.header {
+  height: 44px;
+  width: 100%;
+  background: #0092d8;
+  margin: -8px 5px;
+}
+.header .logio {
+  width: 120px;
+  height: 44px;
+  background: url(../images/index_sprite.png) no-repeat 0 -242px;
+}
+
+/*
+main
+*/
+.main {
+  width: 1190px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+    /*
+右侧注册-form
+*/
+}
+.main img {
+  width: 538px;
+  height: 485px;
+  margin-top: 50px;
+}
+.main .registry_login {
+  width: 300px;
+  height: 408px;
+  padding: 29px 38px 38px;
+  margin-top: 100px;
+  margin-left: -100px;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px 0 #d6d6d6;
+  border-radius: 2px;
+  min-height: 412px;
+}
+.main .registry_login p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #666;
+}
+.main .registry_login ul {
+  margin-bottom: 20px;
+}
+.main .registry_login .qq a {
+  display: block;
+  width: 49px;
+  height: 48px;
+  text-indent: -999em;
+  overflow: hidden;
+  background-image: url(../images/login.png);
+}
+.main .registry_login .wx a {
+  display: block;
+  width: 49px;
+  height: 48px;
+  margin: -49px 70px;
+  text-indent: -999em;
+  overflow: hidden;
+  background-image: url(../images/login.png);
+  background-position: -57px 0;
+}
+.main form {
+  width: 535px;
+  border: 1px #999 solid;
+  position: relative;
+  margin: 51px auto;
+  box-shadow: 0 0 5px rgba(7, 5, 5, 0.5);
+  background: white;
+}
+.main form .care {
+  font-size: 14px;
+  color: #c2c814;
+  margin-left: 28px;
+}
+.main form h2 {
+  font-size: 16px;
+  color: #116589;
+  margin: 50px 0px 30px 100px;
+}
+.main form label {
+  color: #506579;
+  position: absolute;
+  font-size: 14px;
+  width: 90px;
+  left: 20px;
+}
+.main form input {
+  height: 30px;
+  margin: 10px;
+  display: block;
+  width: 280px;
+  text-indent: 100px;
+  outline: none;
+}
+.main form button {
+  width: 280px;
+  height: 30px;
+  background: #d60404;
+  border: 0px;
+  line-height: 30px;
+  color: #19e9ab;
+  margin: 0 0 10px 10px;
+  box-shadow: 0 0 2px 0 #000;
+}
+.main form div {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+}
+.main form span {
+  position: absolute;
+  left: 320px;
+  font-size: 12px;
+}
+.main form button {
+  width: 60px;
+  margin-left: 120px;
+  border-radius: 4px;
+  background: #06495f;
+}
+.main form .Sign {
+  margin-left: 210px;
+  top: 550px;
+}
+.main form .box {
+  position: absolute;
+  left: 190px;
+  top: 535px;
+  width: 20px;
+}
+.main form .yzm {
+  background: white;
+  width: 76px;
+  height: 20px;
+  margin-left: -10px;
+  border-radius: 2px;
+}
+
+/*
+footer
+*/
+.copyright {
+  width: 90%;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 auto 30px;
+  padding-top: 15px;
+  color: #999;
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  font-family: '\5FAE\8F6F\96C5\9ED1';
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

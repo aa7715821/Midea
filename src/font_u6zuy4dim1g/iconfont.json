@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1664368",
+      "name": "下箭头",
+      "font_class": "xiajiantou",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    },
+    {
+      "icon_id": "7872842",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "15847850",
+      "name": "右箭头",
+      "font_class": "youjiantou1",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}
