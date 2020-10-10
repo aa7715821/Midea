@@ -26,7 +26,7 @@ require(['config'], function() {
                         //继续轮播
                         this.timer = window.setInterval(function() {
                             _this.rightarrowclick();
-                        }, 2000);
+                        }, 4000);
                     });
                     // 2.点击对应得小圆圈，当前点击的小圆圈添加类名，其他的隐藏（和小圆圈对应的图片显示）
                     this.btnlist.on('click', function() {

@@ -1,5 +1,5 @@
 require(['config'], function() {
-    require(['jquery', function() {
+    require(['jquery'], function() {
         ! function($) {
             $('.detail_floating .items_s').on('click', function() {
                 $('html').animate({
@@ -7,5 +7,5 @@ require(['config'], function() {
                 });
             });
         }(jQuery)
-    }])
+    })
 })

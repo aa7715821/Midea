@@ -1,7 +1,5 @@
 require(['config'], function() {
         require(['jquery', 'jq_lazyload'], function() {
-            // console.log(1);
-            ;
             ! function($) {
                 const list = $('.floor_goodss .floor_goods1');
                 $.ajax({ //获取远程接口的值

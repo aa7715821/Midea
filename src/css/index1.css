@@ -184,6 +184,8 @@ main
   width: 80px;
 }
 .main .detail_floating .items {
+  width: 62px;
+  height: 64px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -192,10 +194,31 @@ main
   border-bottom: 1px solid #5a5959;
   text-align: center;
   color: white;
+  line-height: 28px;
+}
+.main .detail_floating .items i {
+  font-size: 14px;
+  color: white;
 }
 .main .detail_floating .items span {
   margin: 4px;
   color: red;
+}
+.main .detail_floating .items .gongzhonghao {
+  right: 62px;
+  top: -254px;
+  width: 320px;
+  height: 320px;
+  /* border: 1px solid #c8c8c8; */
+  background: black;
+  z-index: 98;
+  display: none;
+}
+.main .detail_floating .items .gongzhonghao span {
+  position: absolute;
+  left: 310px;
+  top: 279px;
+  color: white;
 }
 .main .nav_r {
   width: 980px;

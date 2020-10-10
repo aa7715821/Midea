@@ -1,14 +1,11 @@
 require(['config'], function() {
-    require(['jquery', 'jq_lazyload'], function() {
-        // console.log(1);
-        ;
+    require(['jquery', 'jq_lazyload'], function() {;
         ! function($) {
-            const list = $('.list ul');
+            const list = $('.list .list-detail');
             $.ajax({ //获取远程接口的值
                 url: 'http://localhost/8-17_HTML/Midea/php/detail.php',
                 dataType: 'json'
             }).done(function(data) {
-                console.log(data);
                 let strhtml = '';
                 $.each(data, function(index, value) { //遍历数组和对象
                     strhtml += `
@@ -16,8 +13,8 @@ require(['config'], function() {
                         <li>
                             <img class="lazy" data-original="${value.url}" width="200" height="200" >
                             <p>${value.title}</p>
-                            <span>${value.price}</span>
-                            <span>${value.sailnumber}</span>
+                            <span class="sort">￥${value.price}</span>
+                            <span>销量：${value.sailnumber}件</span>
                         </li>
                     </a>
                     

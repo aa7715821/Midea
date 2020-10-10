@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../src/css/header.css">
     <link rel="stylesheet" href="../src/css/footer.css">
     <link rel="stylesheet" href="../src/font_u6zuy4dim1g/iconfont.css">
+    <link rel="stylesheet" href="../src/font_9cgkdr9cig/iconfont.css">
     <script src="js/require.js" defer async="true" data-main="js/main.js"></script>
 </head>
 
@@ -68,6 +69,35 @@
 
         </div>
     </div>
+    <!-- 侧边浮动 -->
+    <div class="detail_floating">
+        <div class="items">
+            <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                <span class="iconfont">&#xe646;</span>
+            </a>
+            <i>客服</i>
+        </div>
+        <div class="items">
+            <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                <span class="iconfont">&#xe61e;</span>
+            </a>
+            <i>服务</i>
+        </div>
+        <div class="items gzh">
+            <a target="_blank" href="https://css.midea.cn/mp/online_customer_service/pc_message?channel_key=1400">
+                <span class="iconfont">&#xe501;</span>
+            </a>
+            <i>公众号</i>
+        </div>
+        <div class="items items_s">
+            <a href="#">
+                <span class="iconfont">&#xe64a;</span>
+            </a>
+            <i style="cursor: pointer;">顶部</i>
+
+        </div>
+
+    </div>
     <div class="goods_list">
         <p>推荐</p>
         <div class="price">
@@ -84,12 +114,30 @@
     </div>
     <!-- 列表页 -->
     <div class="list">
-        <ul>
+        <ul class="list-detail">
         </ul>
-        <div>分页效果实现</div>
+
+    </div>
+    <div class="paging">
+
+        <!-- <ol>
+            <li style="height: 30px; line-height: 30px;text-align: center;">
+                <a href="">分页效果</a>
+            </li>
+        </ol> -->
+        <div class="page_list">
+            <div class="page_list1">
+                <span class="page-start">&lt;</span>
+                <span class="page-this" style="background-color: #0093d5;">1</span>
+                <a href="#" pagetag="go" pageid="2">2</a>
+                <a href="#" pagetag="go" pageid="2">3</a>
+                <a href="#" class="page-next" pagetag="go" pageid="2">&gt;</a>
+
+            </div>
+        </div>
     </div>
     <!-- 尾部 -->
-    <div class="footer">
+    <div class="footer" style="margin: 20px 0 0 20px;">
         <div class="banner_nav" style="height: 55px;">
             <ul>
                 <li>
@@ -143,7 +191,5 @@
 
     </div>
 </body>
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script src="../src/js/index1.js"></script>
 
 </html>

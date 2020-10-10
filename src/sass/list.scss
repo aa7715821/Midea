@@ -6,6 +6,7 @@
 
 .list {
     width: 1160px;
+    height: 2070px;
     margin: 0 auto;
     font-size: 14px;
     li {
@@ -16,6 +17,7 @@
         border: 1px solid #ccc;
         height: 310px;
         position: relative;
+        transition: all 1s;
         p {
             width: 200px;
             height: 48px;
@@ -30,12 +32,15 @@
         span {
             display: block;
         }
+        &:hover {
+            transform: translateY(-5%);
+        }
     }
 }
 
 .goods_list {
     width: 1200px;
-    height: 42px;
+    margin: 20px, auto;
     p {
         display: inline-block;
         line-height: 42px;
@@ -66,25 +71,109 @@
     }
     .Price_choice {
         position: relative;
+        display: none;
         ul {
             color: #333;
             position: absolute;
             width: 123px;
-            left: -100px;
             height: 100px;
             border: 1px solid #eee;
             top: -11px;
             box-sizing: border-box;
             background: #fff;
             z-index: 50;
-            left: 78px;
-            top: 10px;
+            left: 105px;
+            top: -30px;
             border-top: none;
             li {
                 z-index: 99;
                 height: 30px;
                 line-height: 65px;
                 text-align: center;
+                font-size: 14px;
+                cursor: pointer;
+                // color: #ccc;
+                &:hover {
+                    color: #f60
+                }
+            }
+        }
+    }
+}
+
+// 分页效果
+.paging {
+    width: 1200px;
+    height: 50px;
+    margin-top: 50px;
+    text-align: center;
+    .page_list {
+        height: 50px;
+        display: inline-block;
+        .page-start,
+        .page-next {
+            font-size: 20px;
+            font-family: simsun;
+            background-color: #fff;
+            color: #999;
+        }
+        span,
+        a {
+            display: inline-block;
+            float: left;
+            width: 50px;
+            line-height: 50px;
+            margin-left: -2px;
+            margin-top: -33px;
+            border: 1px solid #ccc;
+            font-size: 20px;
+            background-color: #fff;
+            color: #bbb;
+        }
+    }
+}
+
+// /二级侧边悬浮/
+.detail_floating {
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    z-index: 99;
+    width: 80px;
+    .items {
+        width: 62px;
+        height: 64px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        background: #000;
+        opacity: 0.75;
+        border-bottom: 1px solid #5a5959;
+        text-align: center;
+        color: white;
+        line-height: 28px;
+        i {
+            font-size: 14px;
+            color: white;
+        }
+        span {
+            margin: 4px;
+            color: red;
+        }
+        .gongzhonghao {
+            right: 62px;
+            top: -254px;
+            width: 320px;
+            height: 320px;
+            /* border: 1px solid #c8c8c8; */
+            background: black;
+            z-index: 98;
+            display: none;
+            span {
+                position: absolute;
+                left: 310px;
+                top: 279px;
+                color: white;
             }
         }
     }

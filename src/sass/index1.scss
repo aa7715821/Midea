@@ -195,6 +195,8 @@ main
         z-index: 99;
         width: 80px;
         .items {
+            width: 62px;
+            height: 64px;
             display: flex;
             flex-direction: column;
             cursor: pointer;
@@ -203,9 +205,30 @@ main
             border-bottom: 1px solid #5a5959;
             text-align: center;
             color: white;
+            line-height: 28px;
+            i {
+                font-size: 14px;
+                color: white;
+            }
             span {
                 margin: 4px;
                 color: red;
+            }
+            .gongzhonghao {
+                right: 62px;
+                top: -254px;
+                width: 320px;
+                height: 320px;
+                /* border: 1px solid #c8c8c8; */
+                background: black;
+                z-index: 98;
+                display: none;
+                span {
+                    position: absolute;
+                    left: 310px;
+                    top: 279px;
+                    color: white;
+                }
             }
         }
     }
