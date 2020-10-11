@@ -15,7 +15,10 @@ require(['config'], function() {
                             <p>${value.title}</p>
                             <span class="sort">￥${value.price}</span>
                             <span>销量：${value.sailnumber}件</span>
+                             <em>自营</em>
+                             <i>用券减50</i>
                         </li>
+                       
                     </a>
                     
                     `;

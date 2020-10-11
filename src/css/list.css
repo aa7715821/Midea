@@ -23,6 +23,13 @@
   height: 48px;
   line-height: 24px;
   overflow: hidden;
+  color: #333333;
+  display: block;
+  max-height: 42px;
+  font-size: 14px;
+  overflow: hidden;
+  word-break: break-all;
+  margin: 8px auto 0;
 }
 .list li img {
   width: 200px;
@@ -31,9 +38,24 @@
 }
 .list li span {
   display: block;
+  color: #ff6600;
 }
 .list li:hover {
   transform: translateY(-5%);
+}
+.list em {
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  color: red;
+  margin-top: 10px;
+}
+.list i {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #eee;
+  background-color: #ff784b;
+  color: white;
 }
 
 .goods_list {

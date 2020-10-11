@@ -15,6 +15,7 @@ require(['config'], function() {
                 dataType: 'json'
             }).done(function(data) {
                 $('.spic img').attr('src', data.url);
+                $('.bf img').attr('src', data.url);
                 $('.loadtitle').html(data.title);
                 $('.loadpcp').html(data.price);
                 let picarr = data.piclisturl.split(','); //数据转换成数组
@@ -26,7 +27,7 @@ require(['config'], function() {
                         </li>
                     `;
                 });
-                $('.list ul').html(strhtml);
+                $('.list .Chart').html(strhtml);
             });
 
             // // 购物车
