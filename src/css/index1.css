@@ -621,7 +621,7 @@ footer
 */
 .footer {
   width: 1200px;
-  margin: 160px 0 0 20px;
+  margin: 20px auto 10px;
 }
 .footer ul {
   width: 1050px;

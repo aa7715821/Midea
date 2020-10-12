@@ -159,7 +159,7 @@
     }
     .p-name {
         width: 450px;
-        height: 50px;
+        height: 60px;
         margin-left: 50px;
         margin-top: 20px;
     }
@@ -273,7 +273,7 @@
         }
     }
     .p-btn {
-        margin-top: 20px;
+        margin-top: 10px;
         height: 65px;
         a {
             width: 200px;
@@ -305,6 +305,8 @@
         border-radius: 2%;
         a {
             color: white;
+            width: 1200px;
+            margin: 0 auto;
         }
     }
 }
@@ -325,4 +327,15 @@
         color: red;
         cursor: pointer;
     }
+}
+
+img {
+    margin: auto;
+    // height: 200px;
+}
+
+.louceng_l {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
 }

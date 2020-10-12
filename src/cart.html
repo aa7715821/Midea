@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../src/common.css">
+    <link rel="stylesheet" href="../src/css/cart.css">
+    <link rel="shortcut icon" href="../src/images/favicon.ico">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/cart.css">
+    <link rel="stylesheet" href="../src/css/cart_common.css">
+    <link rel="stylesheet" href="../src/font_u6zuy4dim1g/iconfont.css">
+    <link rel="stylesheet" href="../src/font_9cgkdr9cig/iconfont.css">
+    <script src="js/require.js" defer async="true" data-main="js/main.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="banner">
+        <!-- logo图标 -->
+        <div class="banner_l">
+            <a class="logo" href="https://www.midea.cn/?mtag=40005.1.10" target="_blank"></a>
+        </div>
+        <div class="banner_m">
+            <ul>
+                <li>
+                    <a class="item" href="https://www.midea.cn" target="_blank">首页</a>
+                </li>
+                <li>
+                    <a class="item" href="https://www.midea.cn/enterprise/cooperation/index?mtag=40005.1.41" target="_blank">企业采购</a>
+                </li>
+                <li>
+                    <a class="item" href="https://vip.midea.cn/my/house_set?mtag=40005.1.43" target="_blank">全屋智能家电套购</a>
+                </li>
+                <li>
+                    <a class="item" href="../src/login.html" target="_blank">会员福利社</a>
+                </li>
+                <li>
+                    <a class="item" href="https://msmart.midea.com/" target="_blank">美的美居</a>
+                </li>
+            </ul>
+        </div>
+        <div class="banner_r">
+            <!-- 美的商城_PC版_首页_搜索 -->
+            <input type="search" name="keyword" id="keyword" placeholder="">
+            <span class="iconfont">&#xe616;</span>
+            <div class="icon_phone1">
+                <div class="wx">
+                    <!-- 微信二维码 -->
+                    <img src="https://pic.mdcdn.cn/h5/pic/202003/5e7c6878e200f.jpg" alt="">
+                </div>
+                <i class="icon_phone"></i>
+            </div>
+            <div class="icon_phone2">
+                <!-- 购物车登录 -->
+                <div class="cart_login">
+                    立即<a href="//www.midea.cn/cart">登录</a>,查看购物车商品
+                </div>
+                <i class="icon_cart"></i>
+            </div>
+            <div class="icon_phone3">
+                <!-- 注册登录-此处要写登录界面的链接 -->
+                <a href="../src/login.html">
+                    <i class="icon_login">&#xe60b;</i>
+                    <em class="icon_login_name">登录</em>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- 主题 -->
+    <div class="page-shopping-cart" id="shopping-cart">
+        <h4 class="cart-title">购物清单</h4>
+
+        <div class="cart-product clearfix">
+            <table>
+                <thead>
+                    <tr class="cart-product-title">
+                        <th class="td-check">
+                            <input type="checkbox" class="check-span fl check-all" :class="{'check-true':isSelectAll}" @click="selectProduct(isSelectAll)" :checked="isSelectAll" id="checkAll"></input>全选</th>
+                        <th class="td-product">商品</th>
+                        <th class="td-num">数量</th>
+                        <th class="td-price">单价(元)</th>
+                        <th class="td-total">金额(元)</th>
+                        <th class="td-do">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in productList" :key="index">
+                        <td class="td-check"><input type="checkbox" class="check-span" @click="item.select=!item.select" :class="{'check-true':item.select}" :checked="item.select"></input>
+                        </td>
+                        <!-- 图片地址 -->
+                        <td class="td-product">
+                            <img src="" width="98" height="98">
+                            <div class="product-info">
+                                <h3></h3>
+                            </div>
+                            <div class="clearfix"></div>
+                        </td>
+                        <td class="td-num">
+                            <div class="product-num">
+                                <a href="javascript:;" class="num-reduce num-do fl" @click="minus(index)"><span></span></a>
+                                <input type="text" class="num-input" v-model="item.pro_num" @input="search($event,index)" @blur="check($event,index)">
+                                <a href="javascript:;" class="num-add num-do fr" @click="add(index)"><span></span></a>
+                            </div>
+                        </td>
+                        <td class="td-price">
+                            <!-- 单价 -->
+                            <p class="red-text">￥<span class="price-text"></span></p>
+                        </td>
+                        <td class="td-total">
+                            <!-- 金额 -->
+                            <p class="red-text">￥<span class="total-text"></span></p>
+                        </td>
+                        <td class="td-do"><a href="javascript:;" class="product-delect" @click="deleteOneProduct(index)">删除</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-product-info">
+            <a class="delect-product" href="javascript:;" @click="deleteProduct">删除所选商品</a>
+            <a class="keep-shopping" href="#">继续购物</a>
+            <a class="btn-buy fr" href="javascript:;">去结算</a>
+            <p class="fr product-total">￥<span></span></p>
+            <p class="fr check-num"><span></span>件商品总计（不含运费）：</p>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="footer">
+        <div class="banner_nav" style="height: 55px;">
+            <ul>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>服务条款</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>隐私政策</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>联系我们</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>帮助中心</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>服务支持</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>东芝商城</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/act/help_center_new/transaction_terms?id=463&amp;parentId=507" target="_blank">
+                        <h3>小天鹅商城</h3>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="copy">
+            <p style="margin-bottom: 10px;">
+                <i>Copyright © 1968-2020 广东美的网络科技有限公司</i>
+                <a href="http://www.beian.miit.gov.cn" target="_blank ">粤ICP备17058257号</a>
+                <img src="../src/images/gongan.jpg" alt=""> 粤公网安备 44060602000546号
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44060602000546" target="_blank"></a>
+                <img src="../src/images/gongshang.jpg" alt="工商局红盾标志" style="width: 20px;">
+                <a href="https://www.midea.cn/act/help_center_new/transaction_terms?id=341&parentId=841"> 粤工商备P06811806002512</a>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

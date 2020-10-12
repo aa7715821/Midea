@@ -6,7 +6,7 @@
 
 .list {
     width: 1160px;
-    height: 2070px;
+    height: 732px;
     margin: 0 auto;
     font-size: 14px;
     li {
@@ -62,7 +62,7 @@
 
 .goods_list {
     width: 1200px;
-    margin: 20px, auto;
+    margin: auto;
     p {
         display: inline-block;
         line-height: 42px;
@@ -109,8 +109,8 @@
             border-top: none;
             li {
                 z-index: 99;
-                height: 30px;
-                line-height: 65px;
+                height: 40px;
+                line-height: 40px;
                 text-align: center;
                 font-size: 14px;
                 cursor: pointer;
@@ -124,35 +124,72 @@
 }
 
 // 分页效果
-.paging {
-    width: 1200px;
-    height: 50px;
-    margin-top: 50px;
+.pagelist {
+    clear: both;
+    width: 1170px;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 20px;
+    background-color: red;
+}
+
+.m-style {
+    float: right;
     text-align: center;
-    .page_list {
-        height: 50px;
-        display: inline-block;
-        .page-start,
-        .page-next {
-            font-size: 20px;
-            font-family: simsun;
-            background-color: #fff;
-            color: #999;
-        }
-        span,
-        a {
-            display: inline-block;
-            float: left;
-            width: 50px;
-            line-height: 50px;
-            margin-left: -2px;
-            margin-top: -33px;
-            border: 1px solid #ccc;
-            font-size: 20px;
-            background-color: #fff;
-            color: #bbb;
+    span {
+        float: left;
+        margin: 0 5px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        color: #bdbdbd;
+        font-size: 14px;
+    }
+    .active {
+        float: left;
+        margin: 0 5px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        background: #e91e63;
+        color: #fff;
+        font-size: 14px;
+        border: 1px solid #e91e63;
+    }
+    a {
+        float: left;
+        margin: 0 5px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        background: #fff;
+        border: 1px solid #ebebeb;
+        color: #bdbdbd;
+        font-size: 14px;
+        &:hover {
+            color: #fff;
+            background: #e91e63;
         }
     }
+}
+
+.m-style:before,
+.m-style:after {
+    content: "";
+    display: table;
+}
+
+.m-style:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.m-style .next,
+.m-style .prev {
+    font-family: "Simsun";
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
 }
 
 // /二级侧边悬浮/

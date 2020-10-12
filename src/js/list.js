@@ -1,6 +1,6 @@
-require(['config'], function() {
-    require(['jquery'], function() {
-        ! function($) {
+define(['jquery'], function() {
+    return {
+        tab: ! function() {
             // 1.鼠标滑过price，价格选择框显示，滑出隐藏
             $(".price").hover(function() {
                     $(".Price_choice").show();
@@ -14,7 +14,6 @@ require(['config'], function() {
                 $(this).hide();
                 // $(this).removeClass('.Price_choice') //此行代码作废-暂不删除
             });
-
-        }(jQuery)
-    })
-})
+        }()
+    }
+});

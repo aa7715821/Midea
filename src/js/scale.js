@@ -1,7 +1,6 @@
-require(['config'], function() {
-    require(['jquery', 'jq_cookie'], function() {
-
-        ! function($) {
+define(['jquery'], function() {
+    return {
+        scale: ! function() {
             $('.sf').width($('.spic').width() * $('.bf').width() / $('.bpic').width());
             $('.sf').height($('.spic').height() * $('.bf').height() / $('.bpic').height());
             var bili = $('.bpic').width() / $('.spic').width();
@@ -46,6 +45,6 @@ require(['config'], function() {
                 var $imgurl = $(this).find('img').attr('src');
                 $('.spic img').attr('src', $imgurl)
             })
-        }(jQuery);
-    })
-})
+        }()
+    }
+});

@@ -1,6 +1,6 @@
-require(['config'], function() {
-    require(['jquery'], function() {
-        ! function($) {
+define(['jquery'], function() {
+    return {
+        seclist: ! function() {
             // 1.鼠标经过li，cartlist显示，否则隐藏。
             $('.nav .side li').hover(function() {
                 $(this).addClass('active').siblings().removeClass('active');
@@ -18,7 +18,6 @@ require(['config'], function() {
             }, function() {
                 $(this).hide();
             });
-
-        }(jQuery);
-    })
-})
+        }()
+    }
+});

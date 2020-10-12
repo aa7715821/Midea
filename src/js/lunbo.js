@@ -1,6 +1,6 @@
-require(['config'], function() {
-    require(['jquery'], function() {
-        ! function($) {
+define(['jquery'], function() {
+    return {
+        lunbo: ! function() {
             class Lunbo {
                 constructor() {
                     this.lunbo = $('.nav .lunbo');
@@ -75,6 +75,6 @@ require(['config'], function() {
                 }
             }
             new Lunbo().init();
-        }(jQuery);
-    })
-})
+        }()
+    }
+});

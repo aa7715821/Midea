@@ -1,6 +1,6 @@
-require(['config'], function() {
-    require(['jquery'], function() {
-        ! function($) {
+define(['jquery'], function() {
+    return {
+        index1: ! function() {
             // 手机二维码
             $(".icon_phone1").hover(function() {
                 $(".wx img").show();
@@ -20,7 +20,6 @@ require(['config'], function() {
             }, function() {
                 $(this).hide();
             });
-
-        }(jQuery)
-    })
-})
+        }()
+    }
+});

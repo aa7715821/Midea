@@ -1,6 +1,6 @@
-require(['config'], function() {
-    require(['jquery', 'jq_lazyload'], function() {;
-        ! function($) {
+define(['jquery', 'jq_lazyload'], function() {
+    return {
+        detail: ! function() {
             const list = $('.list .list-detail');
             $.ajax({ //获取远程接口的值
                 url: 'http://localhost/8-17_HTML/Midea/php/detail.php',
@@ -18,9 +18,9 @@ require(['config'], function() {
                              <em>自营</em>
                              <i>用券减50</i>
                         </li>
-                       
+
                     </a>
-                    
+
                     `;
                 });
                 list.html(strhtml); //追加数据
@@ -29,6 +29,6 @@ require(['config'], function() {
                     effect: "fadeIn" //图片显示方式
                 });
             })
-        }(jQuery);
-    })
-})
+        }()
+    }
+});

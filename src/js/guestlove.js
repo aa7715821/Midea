@@ -1,15 +1,15 @@
-require(['config'], function() {
-        require(['jquery', 'jq_lazyload'], function() {
-            ! function($) {
-                const list = $('.floor_goodss .floor_goods1');
-                $.ajax({ //获取远程接口的值
-                    url: 'http://localhost/8-17_HTML/Midea/php/index1.php',
-                    dataType: 'json'
-                }).done(function(data) {
-                    console.log(data);
-                    let strhtml = '';
-                    $.each(data, function(index, value) { //遍历数组和对象
-                        strhtml += `
+define(['jquery', 'jq_lazyload'], function() {
+    return {
+        guestlove: ! function() {
+            const list = $('.floor_goodss .floor_goods1');
+            $.ajax({ //获取远程接口的值
+                url: 'http://localhost/8-17_HTML/Midea/php/index1.php',
+                dataType: 'json'
+            }).done(function(data) {
+                console.log(data);
+                let strhtml = '';
+                $.each(data, function(index, value) { //遍历数组和对象
+                    strhtml += `
                        <div class="floor_goods1">
                                 <a href="detail.html?sid=${value.sid}">
                                     <div class="product">
@@ -32,14 +32,13 @@ require(['config'], function() {
                                 </a>
                             </div>
                     `;
-                    });
-                    list.html(strhtml); //追加数据
-                    //实现懒加载效果
-                    $("img.lazy").lazyload({
-                        effect: "fadeIn" //图片显示方式
-                    });
-                })
-            }(jQuery);
-        })
-    })
-    /*  */
+                });
+                list.html(strhtml); //追加数据
+                //实现懒加载效果
+                $("img.lazy").lazyload({
+                    effect: "fadeIn" //图片显示方式
+                });
+            })
+        }()
+    }
+});
