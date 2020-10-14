@@ -6,8 +6,7 @@ var form = document.querySelector('form');
 
 //设置全部验证通过可提交
 let yz = true;
-let yz1 = true;
-let yz2 = true;
+
 
 // 用户名
 
@@ -36,8 +35,8 @@ oInput[0].onblur = function() {
             }
 
         } else { //当内容为空时
-            // oSpan[0].innerHTML = "用户名不能为空";
-            // oSpan[0].style.color = "red";
+            oSpan[0].innerHTML = "用户名不能为空";
+            oSpan[0].style.color = "red";
 
         }
     }
@@ -58,12 +57,12 @@ oInput[1].onblur = function() { //失去焦点  判断
         oSpan[1].innerHTML = "请输入密码";
         oSpan[1].style.color = "red";
 
+
     }
 }
 
 // 点击登录的时候
 oBt.onclick = function(ev) {
-
     var ev = ev || window.event;
     if (oInput[0].value == "" && oInput[1].value == "") {
         oSpan[0].innerHTML = "用户名不能为空";

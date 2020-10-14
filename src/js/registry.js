@@ -271,13 +271,13 @@ oInput[6].onblur = function() { //失去焦点  判断
         }
     }
     //提交检测
-oBt.onmousedown = function() {
-    if (yz == true) {
-        //满足条件
-        alert("注册成功")
+    // oBt.onmousedown = function() {
+    //     if (yz == true) {
+    //         //满足条件
+    //         alert("注册成功")
 
-    } else {
-        //不满足条件
-        alert("请确认是否正确")
-    }
-}
+//     } else {
+//         //不满足条件
+//         alert("请检查是否正确")
+//     }
+// };

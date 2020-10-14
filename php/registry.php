@@ -2,7 +2,7 @@
 include "conn.php";
 if(isset($_POST['username'])){
     $user = $_POST['username'];//获取前端传来的用户名。
-    $result = $conn->query("select * from media-registry where name='$user'");
+    $result = $conn->query("select * from registry where name='$user'");
     if($result->fetch_assoc()){
         echo true;
     }else{

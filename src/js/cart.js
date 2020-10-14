@@ -51,8 +51,10 @@ define(['jquery', 'jq_cookie'], function() {
                          `;
                             $('.cart-product tbody').append(strhtml);
                             // calc(); //总算总价
+
                         }
                     });
+
                     // 1,点击全选按钮
                     var all = $('.check-all ');
                     var inputs = $('.check-span').not('.check-all')
@@ -70,48 +72,105 @@ define(['jquery', 'jq_cookie'], function() {
                         }
                     });
 
-                    //计算总的商品件数和总价。
-                    // function priceall() {
-                    //     var $sum = 0;
-                    //     var $count = 0;
-                    //     $('.goods').each(function(index, element) {
-                    //         if ($(element).find('.td-check input').prop('checked')) {
-                    //             $sum += parseInt($(element).find('.product-num').find('.num-input').val());
-                    //             $count += parseFloat($(element).find('.red-text').find('.total-text').html());
-                    //         }
-                    //     });
+                    // 3.商品数量的加减
 
-                    //     $('.check-num').find('em').html($sum);
-                    //     $('.product-total').html('￥' + $count.toFixed(2));
-                    // }
+                    $('.num-add').on('click', function() {
+                        var $count = $(this).parents('.product-num').find('.num-input').val(); //值
+                        $count++;
+                        if ($count >= 99) {
+                            $count = 99;
+                        }
+                        $(this).parents('.product-num').find('.num-input').val($count); //赋值回去
+                        $(this).parents('.product-num').find('.total-text').html(singlegoodsprice($(this))); //改变后的价格
+                        priceall(); //重新计算总和。
+                        setcookie($(this)); //将改变的数量重新添加到cookie
+
+                    });
+                    $('.num-reduce').on('click', function() {
+                        var $count = $(this).parents('.product-num').find('.num-input').val(); //值
+                        $count--;
+                        if ($count <= 1) {
+                            $count = 1;
+                        }
+                        $(this).parents('.product-num').find('.num-input').val($count); //赋值回去
+                        $(this).parents('.product-num').find('.total-text').html(singlegoodsprice($(this))); //改变后的价格
+                        priceall(); //重新计算总和。
+                        setcookie($(this)); //将改变的数量重新添加到cookie
+
+                    });
+
+
+
+
+                    4. //计算总的商品件数和总价。
+                    function priceall() {
+                        var $sum = 0;
+                        var $count = 0;
+                        $('.cart-product tbody').each(function(index, element) {
+                            if ($(element).find('.td-check input').prop('checked')) {
+                                $sum += parseInt($(element).find('.product-num').find('.num-input').val());
+                                $count += parseFloat($(element).find('.td-total').find('.total-text').html());
+                            }
+                        });
+
+                        $('.check-num').find('span').html($sum);
+                        $('.product-total').html($count.toFixed(2));
+                    }
+                    // 5.单个价格
+                    function singlegoodsprice(obj) { //obj:当前元素
+                        var $dj = parseFloat(obj.parents('.cart-product tbody').find('.red-text').html()); //单价
+                        var $cnum = parseInt(obj.parents('.cart-product tbody').find('.product-num').find('.num-input').val()); //数量
+                        return ($dj * $cnum).toFixed(2); //结果
+                    }
+
+
+
+                    //8.将改变后的数量的值存放到cookie
+                    //点击按钮将商品的数量和id存放cookie中
+                    var arrsid = []; //商品的id
+                    var arrnum = []; //商品的数量
+                    //提前获取cookie里面id和num
+                    function cookietoarray() {
+                        // if (getcookie('cookiesid') && getcookie('cookienum')) {
+                        arrsid = getcookie('cookiesid').split(','); //cookie商品的sid  
+                        arrnum = getcookie('cookienum').split(','); //cookie商品的num
+                    }
+
+
+                    function setcookie(obj) { //obj:当前操作的对象
+                        cookietoarray(); //得到数组
+                        var $index = obj.parents('.goods-item').find('img').attr('sid'); //通过id找数量的位置
+                        arrnum[$.inArray($index, arrsid)] = obj.parents('.goods-item').find('.quantity-form input').val();
+                        addcookie('cookienum', arrnum.toString(), 7);
+                    }
 
 
                 })
             }
 
             // 3.购物车其他功能
-
-            // 商品数量加减
-            $('.cart-product tbody').on('click', '.num-reduce', function() {
-                $('.num-input').val(Number($('.num-input').val()) - 1);
-                if ($('.num-input').val() == 0) {
-                    $('.num-input').val(1)
-
-                }
-
-            })
-            $('.cart-product tbody').on('click', '.num-add', function() {
-                $('.num-input').val(Number($('.num-input').val()) + 1);
-
-            })
-
-
             // 删除单个商品
             $('.cart-product tbody').on('click', '.product-delect', function() {
                 alert('确定要删除嘛？')
                 $(this).parent().parent().remove()
+
             })
 
+            // function calc() {
+            //     let allprice = 0; //总价
+            //     let allcount = 0; //总的数量
+            //     $('.cart-product tbody').each(function(index, element) {
+            //         if ($(element).find('.td-check input').prop('checked')) { //复选框选中。
+            //             allcount += parseInt($(this).find('.num-input').val()); //总的件数
+            //             allprice += parseInt($(this).find('.total-text').html()); //总价
+            //         }
+            //     });
+            //     $('.amount-sum em').html(allcount);
+            //     $('.totalprice').html(allprice.toFixed(2));
+
+            //     $('.check-num').html(allcount);
+            //     $('.product-total').html(allprice.toFixed(2));
+            // }
 
 
 
