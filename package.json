@@ -1,0 +1,32 @@
+{
+  "name": "midea",
+  "version": "1.0.0",
+  "description": "吴春龙的美的商城代码",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.5",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aa7715821/Midea.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aa7715821/Midea/issues"
+  },
+  "homepage": "https://github.com/aa7715821/Midea#readme"
+}

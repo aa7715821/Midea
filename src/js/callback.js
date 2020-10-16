@@ -1,5 +1,5 @@
 function ajax(option) { //option:对象参数
-    let ajax = new XMLHttpRequest();
+    var ajax = new XMLHttpRequest();
 
     //1.配置请求方式参数，默认为get
     option.type = (option.type || 'get').toLowerCase(); //转换小写。
@@ -19,8 +19,8 @@ function ajax(option) { //option:对象参数
 
     //4.发送数据get - 数据存在发送。
     function objtostring(obj) { //对象转后端能够识别的字符串。
-        let objarr = [];
-        for (let i in obj) {
+        var objarr = [];
+        for (var i in obj) {
             objarr.push(i + '=' + obj[i]);
         }
         return objarr.join('&')
@@ -54,7 +54,7 @@ function ajax(option) { //option:对象参数
                     //重要：
                     //函数内部的数据，通过回调函数获取
                     //option.success存在，并且是函数，调用option.success()
-                    let data = ajax.responseText; //存储当前的数据
+                    var data = ajax.responseText; //存储当前的数据
                     if (option.dataType === 'json') {
                         data = JSON.parse(data); //数据转换成对象
                     }

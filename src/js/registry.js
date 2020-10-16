@@ -4,9 +4,9 @@ var oSpan = document.querySelectorAll("span"); //获取元素对象
 var oBt = document.querySelector("button"); //获取元素对象
 
 //设置全部验证通过可提交
-let yz = true;
-let yz1 = true;
-let yz2 = true;
+var yz = true;
+var yz1 = true;
+var yz2 = true;
 
 // 用户名
 oInput[0].onfocus = function() { //获得焦点时提示
@@ -240,7 +240,7 @@ oInput[6].onblur = function() {
 }
 
 function fn() { //随机4位数
-    return arr = `${parseInt(Math.random()*10)}${parseInt(Math.random()*10)}${parseInt(Math.random()*10)}${parseInt(Math.random()*10)}`
+    return arr = '' + parseInt(Math.random() * 10) + '' + parseInt(Math.random() * 10) + '' + parseInt(Math.random() * 10) + '' + parseInt(Math.random() * 10) + '';
 }
 oSpan[6].innerHTML = fn();
 oSpan[6].style.margin = "1px auto"

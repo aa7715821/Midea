@@ -5,7 +5,7 @@ var oBt = document.querySelector("button"); //获取元素对象
 var form = document.querySelector('form');
 
 //设置全部验证通过可提交
-let yz = true;
+var yz = true;
 
 
 // 用户名

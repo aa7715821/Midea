@@ -2,7 +2,7 @@ define(['jquery'], function() {
     return {
         move: ! function() {
             $(window).on('scroll', function() {
-                let $top = $(window).scrollTop(); //滚动条顶部的偏移
+                var $top = $(window).scrollTop(); //滚动条顶部的偏移
                 if ($top >= 800) {
                     $('.move_nav').stop(true).animate({
                         top: 0

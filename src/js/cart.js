@@ -4,9 +4,9 @@ define(['jquery', 'jq_cookie'], function() {
             //1.渲染购物车列表
             //获取cookie，进行渲染。
             if ($.cookie('cookiesid') && $.cookie('cookienum')) { //cookie存在,获取cookie转成数组
-                let sid = $.cookie('cookiesid').split(','); //[1,2,3]
-                let num = $.cookie('cookienum').split(','); //[100,200,300]
-                for (let i = 0; i < sid.length; i++) {
+                var sid = $.cookie('cookiesid').split(','); //[1,2,3]
+                var num = $.cookie('cookienum').split(','); //[100,200,300]
+                for (var i = 0; i < sid.length; i++) {
                     rendercart(sid[i], num[i])
                 }
             }
@@ -20,38 +20,9 @@ define(['jquery', 'jq_cookie'], function() {
 
                     $.each(data, function(index, value) {
                         if (value.sid == sid) { //数据接口的sid和当前商品的sid进行比较，如果相等，直接赋值。
-                            let strhtml = '';
-                            strhtml += `
-                            <tr v-for="(item,index) in productList":key="index" class="goods">
-                                <td class="td-check"><input type="checkbox" class="check-span checked=""  check-true"></td>
-                                <td class="td-product"><img src="${value.url}" width="98" height="98">
-                                <div class="product-info">
-                                    <h3>${value.title}</h3>
-                                </div>
-                                <div class="clearfix"></div>
-                                </td>
-                                <td class="td-num">
-                                <div class="product-num">
-                                    <a href="javascript:;" class="num-reduce num-do fl" @click="minus(index)"><span></span></a>
-                                    <input type="text" value="${num}" class="num-input">
-                                    <a href="javascript:;" class="num-add num-do fr" @click="add(index)"><span></span></a>
-                                </div>
-                                 </td>
-                                <td class="td-price">
-                                <p class="red-text">￥<span class="price-text">${value.price}</span></p>
-                                </td>
-                            
-                                <td class="td-total">
-                                <p class="red-text">￥<span class="total-text">${(value.price*num).toFixed(2)}</span></p>
-                                </td>
-                                </td>
-                                <td class="td-do"><a href="javascript:;" class="product-delect"  @click="deleteOneProduct(index)">删除</a></td>
-                            </tr>
-                        
-                         `;
+                            var strhtml = '';
+                            strhtml += '<tr v-for="(item,index) in productList":key="index" class="goods"><td class="td-check"><input type="checkbox" class="check-span checked=""  check-true"></td><td class="td-product"><img src=' + value.url + 'width="98" height="98"><div class="product-info"><h3>' + value.title + '</h3></div><div class="clearfix"></div></td><td class="td-num"><div class="product-num"><a href="javascript:;" class="num-reduce num-do fl" @click="minus(index)"><span></span></a><input type="text" value=' + num + ' class="num-input"><a href="javascript:;" class="num-add num-do fr" @click="add(index)"><span></span></a></div></td><td class="td-price"><p class="red-text">￥<span class="price-text">' + value.price + '</span></p></td><td class="td-total"><p class="red-text">￥<span class="total-text">  ' + (value.price * num).toFixed(2) + '</span></p></td></td><td class="td-do"><a href="javascript:;" class="product-delect"@click="devareOneProduct(index)">删除</a></td></tr>';
                             $('.cart-product tbody').append(strhtml);
-                            // calc(); //总算总价
-
                         }
                     });
 
@@ -98,10 +69,6 @@ define(['jquery', 'jq_cookie'], function() {
                         setcookie($(this)); //将改变的数量重新添加到cookie
 
                     });
-
-
-
-
                     4. //计算总的商品件数和总价。
                     function priceall() {
                         var $sum = 0;
@@ -122,9 +89,6 @@ define(['jquery', 'jq_cookie'], function() {
                         var $cnum = parseInt(obj.parents('.cart-product tbody').find('.product-num').find('.num-input').val()); //数量
                         return ($dj * $cnum).toFixed(2); //结果
                     }
-
-
-
                     //8.将改变后的数量的值存放到cookie
                     //点击按钮将商品的数量和id存放cookie中
                     var arrsid = []; //商品的id
@@ -135,7 +99,6 @@ define(['jquery', 'jq_cookie'], function() {
                         arrsid = getcookie('cookiesid').split(','); //cookie商品的sid  
                         arrnum = getcookie('cookienum').split(','); //cookie商品的num
                     }
-
 
                     function setcookie(obj) { //obj:当前操作的对象
                         cookietoarray(); //得到数组
@@ -155,25 +118,6 @@ define(['jquery', 'jq_cookie'], function() {
                 $(this).parent().parent().remove()
 
             })
-
-            // function calc() {
-            //     let allprice = 0; //总价
-            //     let allcount = 0; //总的数量
-            //     $('.cart-product tbody').each(function(index, element) {
-            //         if ($(element).find('.td-check input').prop('checked')) { //复选框选中。
-            //             allcount += parseInt($(this).find('.num-input').val()); //总的件数
-            //             allprice += parseInt($(this).find('.total-text').html()); //总价
-            //         }
-            //     });
-            //     $('.amount-sum em').html(allcount);
-            //     $('.totalprice').html(allprice.toFixed(2));
-
-            //     $('.check-num').html(allcount);
-            //     $('.product-total').html(allprice.toFixed(2));
-            // }
-
-
-
         }()
     }
 })

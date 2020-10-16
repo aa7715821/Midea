@@ -1,7 +1,7 @@
 define(['jquery', 'jq_cookie'], function() {
     return {
         main: ! function() {
-            let sid = location.search.substring(1).split('=')[1];
+            var sid = location.search.substring(1).split('=')[1];
             //判断sid是否存在
             if (!sid) {
                 sid = 1;
@@ -19,14 +19,11 @@ define(['jquery', 'jq_cookie'], function() {
                 $('.bf img').attr('src', data.url);
                 $('.loadtitle').html(data.title);
                 $('.loadpcp').html(data.price);
-                let picarr = data.piclisturl.split(','); //数据转换成数组
-                let strhtml = '';
+                var picarr = data.piclisturl.split(','); //数据转换成数组
+                var strhtml = '';
                 $.each(picarr, function(index, value) {
-                    strhtml += `
-                        <li>
-                            <img src="${value}"/>
-                        </li>
-                    `;
+                    strhtml +=
+                        '<li><img src=' + value + '></li>';
                 });
                 $('.list .Chart').html(strhtml);
             });
@@ -44,8 +41,8 @@ define(['jquery', 'jq_cookie'], function() {
 
             // 购物车下单商品存储到cookie
 
-            let arrnum = [];
-            let arrsid = [];
+            var arrnum = [];
+            var arrsid = [];
 
             function getcookie() {
                 if ($.cookie('cookiesid') && $.cookie('cookienum')) { //cookie存在
@@ -70,8 +67,8 @@ define(['jquery', 'jq_cookie'], function() {
                     $.cookie('cookienum', arrnum, { expires: 10, path: '/' }); //插件完成的cookie的添加。
                 } else { //存在,商品的数量累加
                     //获取原来的sid对应的数量(sid和数量是对应的 ，sid的在数组的位置就是数量在数组的位置)
-                    let index = $.inArray(sid, arrsid); //sid在数组中的位置
-                    let num = parseInt(arrnum[index]); //sid对应的数量
+                    var index = $.inArray(sid, arrsid); //sid在数组中的位置
+                    var num = parseInt(arrnum[index]); //sid对应的数量
                     //原来的数量+新添加数量，一起存入cookie
                     arrnum[index] = num + parseInt($('.num').val()); //原来的数量+新添加数量进行赋值
                     $.cookie('cookienum', arrnum, { expires: 10, path: '/' }); //一起存入cookie

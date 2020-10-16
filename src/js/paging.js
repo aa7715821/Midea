@@ -15,33 +15,23 @@ define(['jquery', 'jq_lazyload', 'pagination'], function() {
                 // $(this).removeClass('.Price_choice') //此行代码作废-暂不删除
             });
             //排序
-            let array_default = []; //排序前的li数组
-            let array = []; //排序中的数组
+            var array_default = []; //排序前的li数组
+            var array = []; //排序中的数组
             //冒泡排序，比较相邻的两个数字。
-            let prev = null; //前一个商品价格
-            let next = null; //后一个商品价格
+            var prev = null; //前一个商品价格
+            var next = null; //后一个商品价格
 
             //1.渲染列表页的数据-默认渲染第一页
-            const $list = $('.list .list-detail');
+            var $list = $('.list .list-detail');
             $.ajax({
                 url: 'http://localhost/8-17_HTML/Midea/php/listdata.php',
                 dataType: 'json'
             }).done(function(data) {
-                let $strhtml = '<ul>';
+                var $strhtml = '<ul>';
                 $.each(data, function(index, value) {
-                    $strhtml += `
-                                <a href="detail.html?sid=${value.sid}">
-                                <li>
-                                    <img class="lazy" data-original="${value.url}" width="200" height="200" >
-                                    <p>${value.title}</p>
-                                    <span class="price">￥${value.price}</span>
-                                    <span>销量：${value.sailnumber}件</span>
-                                    <em>自营</em>
-                                    <i>用券减50</i>
-                                </li>
-                            
-                            </a>
-                    `;
+                    $strhtml +=
+
+                        ' <a href="detail.html?sid=${value.sid}"> <li><img class="lazy" data-original=' + value.url + ' width="200" height="200" ><p>' + value.title + '</p><span class="price">￥' + value.price + '</span><span>销量：' + value.sailnumber + '件</span><em>自营</em><i>用券减50</i></li></a>';
                 });
                 $strhtml += '</ul>';
                 $list.html($strhtml);
@@ -77,20 +67,10 @@ define(['jquery', 'jq_lazyload', 'pagination'], function() {
                         },
                         dataType: 'json'
                     }).done(function(data) {
-                        let $strhtml = '<ul>';
+                        var $strhtml = '<ul>';
                         $.each(data, function(index, value) {
-                            $strhtml += `
-                                    <li>
-                                        <a href="detail.html?sid=${value.sid}" target="_blank">
-                                            <img src="${value.url}"/>
-                                            <p>${value.sid}${value.title}</p>
-                                            <span class="price">￥${value.price}</span>
-                                            <span>${value.sailnumber}</span>
-                                            <em>自营</em>
-                                            <i>用券减50</i>
-                                        </a>
-                                    </li>
-                                `;
+                            $strhtml +=
+                                '<li><a href="detail.html?sid=${value.sid}" target="_blank"><img src="${value.url}"/><p>' + value.sid + '' + value.title + '</p><span class="price">￥' + value.price + '</span><span>' + value.sailnumber + '</span><em>自营</em><i>用券减50</i></a></li>';
                         });
                         $strhtml += '</ul>';
                         $list.html($strhtml);
@@ -116,13 +96,13 @@ define(['jquery', 'jq_lazyload', 'pagination'], function() {
 
             $('.Price_choice li').eq(0).on('click', function() {
 
-                for (let i = 0; i < array.length - 1; i++) {
-                    for (let j = 0; j < array.length - i - 1; j++) {
+                for (var i = 0; i < array.length - 1; i++) {
+                    for (var j = 0; j < array.length - i - 1; j++) {
                         prev = parseFloat(array[j].find('.price').html().substring(1)); //取上个价格
                         next = parseFloat(array[j + 1].find('.price').html().substring(1)); //下一个的价格
                         //通过价格的判断，改变的是数组li的位置。
                         if (prev > next) {
-                            let temp = array[j];
+                            var temp = array[j];
                             array[j] = array[j + 1];
                             array[j + 1] = temp;
                         }
@@ -139,13 +119,13 @@ define(['jquery', 'jq_lazyload', 'pagination'], function() {
             // 降序
 
             $('.Price_choice li').eq(1).on('click', function() {
-                for (let i = 0; i < array.length - 1; i++) {
-                    for (let j = 0; j < array.length - i - 1; j++) {
+                for (var i = 0; i < array.length - 1; i++) {
+                    for (var j = 0; j < array.length - i - 1; j++) {
                         prev = parseFloat(array[j].find('.price').html().substring(1)); //取上个价格
                         next = parseFloat(array[j + 1].find('.price').html().substring(1)); //下一个的价格
                         //通过价格的判断，改变的是数组li的位置。
                         if (prev < next) {
-                            let temp = array[j];
+                            var temp = array[j];
                             array[j] = array[j + 1];
                             array[j + 1] = temp;
                         }
