@@ -6,6 +6,7 @@ define(['jquery', 'jq_cookie'], function() {
             if (!sid) {
                 sid = 1;
             }
+
             // 链接数据库，渲染购物车
             $.ajax({
                 url: 'http://localhost/8-17_HTML/Midea/php/getsid.php',

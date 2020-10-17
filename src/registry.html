@@ -51,11 +51,12 @@
     const span = document.querySelector('.user-span');
     let flag = true;
     username.onblur = function() {
+        console.log(111111111111111111111);
         ajax({
             type: 'post',
             url: 'http://localhost/8-17_HTML/Midea/php/registry.php',
             data: {
-                name: this.value
+                username: this.value
             },
             success: function(data) {
                 if (data) {

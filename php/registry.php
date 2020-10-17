@@ -1,8 +1,12 @@
 <?php
 include "conn.php";
+header('Access-Control-Allow-Origin:*');   //任意地址都可以访问
+header('Access-Control-Allow-Method:POST,GET');  //跨越请求的方式
+
 if(isset($_POST['username'])){
     $user = $_POST['username'];//获取前端传来的用户名。
-    $result = $conn->query("select * from registry where name='$user'");
+    echo $user;
+    $result = $conn->query("select * from registry where username='$user'");
     if($result->fetch_assoc()){
         echo true;
     }else{

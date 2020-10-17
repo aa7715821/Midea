@@ -51,7 +51,7 @@ gulp.task('runimg', function() {
 //监听:
 //如果将任务名称设置为default，执行任务的时候直接gulp。
 gulp.task('default', function() {
-    watch(['src/*.html', 'src/sass/*.scss', 'src/js/*.js'], gulp.parallel('html', 'runsass', 'fy'));
+    watch(['src/*.html', 'src/sass/*.scss', 'src/js/*.js', 'src/images/*.png'], gulp.parallel('html', 'runsass', 'fy', 'runimg'));
     //watch的第一个参数监听的文件的路径，第二个参数是监听运行的任务名
     //gulp.parallel() –并行运行任务 
 });
